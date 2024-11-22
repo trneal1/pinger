@@ -72,10 +72,11 @@ def ping():
                     counts[i] = counts[i] + 1
                     lastdrop[i] = iteration
                     print(hosts[i])
+            a=4/0
             time.sleep(8)
         except Exception as e:
             print('An exception occurred:', e)
-            logger.info(print('An exception occurred:', e))
+            logger.info(f'Exception: {e}')
         finally:
             sock.close()
             sock1.close()
